@@ -60,17 +60,7 @@ def create_features(df, label=None):
         return X, y
     return X
 
-X, y = create_features(df, label='y')
 
-
-features_and_target = pd.concat([X, y], axis=1)
-
-
-X_sCOV, y_sCOV = create_features(df, label='y')
-
-
-features_and_target_sCOV = pd.concat([X_sCOV,  y_sCOV], axis=1)
- 
  
  
  
