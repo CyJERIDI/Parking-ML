@@ -19,6 +19,23 @@ df = pd.concat(frames)
 df_train = df.loc[df.ds <=split_date].copy()
 df_test =df.loc[df.ds> split_date].copy()
 
+from prophet import Prophet
+
+
+def predict(date_future):
+ df_train_prophet = df_train.reset_index()  
+
+ 
+
+ model = Prophet ( )
+ model.add_country_holidays(country_name='FR')
+
+ model.fit(df_train_prophet)
+ future_date = pd.date_range(date_future , periods=30, freq='D')
+ future_date = pd.DataFrame({'ds': future_date })
+ pred = model.predict(future_date )
+ return pred
+ predict('2023-05-01')
 
 
 st.title("A Simple Streamlit Web App")
