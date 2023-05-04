@@ -12,7 +12,7 @@ import numpy as np
 import pandas as pd
 
 import matplotlib.pyplot as plt
-pip install prophet
+python3 -m pip install prophet
 import prophet
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 
