@@ -45,4 +45,5 @@ st.title("A Simple Streamlit Web App")
 dat = st.text_input("Faire la prédiction à partir de la date : ", '')
 
 st.write(f" la prédition d'un mois ")
-st.dataframe(dat['yhat'])
+d=predict(dat)
+st.dataframe(d['yhat'])
