@@ -35,7 +35,8 @@ def predict(date_future):
  future_date = pd.DataFrame({'ds': future_date })
  pred = model.predict(future_date )
  return pred
- predict('2023-05-01')
+d=predict('2023-05-01')
+st.dataframe(d)
 
 
 st.title("A Simple Streamlit Web App")
