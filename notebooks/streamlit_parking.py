@@ -10,7 +10,7 @@ Original file is located at
 # Commented out IPython magic to ensure Python compatibility.
 import numpy as np
 import pandas as pd
-import seaborn as sns
+
 import matplotlib.pyplot as plt
 # %pip install prophet
 import prophet
