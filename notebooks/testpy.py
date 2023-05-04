@@ -39,6 +39,43 @@ def predict(date_future):
 
 
 
+def create_features(df, label=None):
+     
+    df = df.copy()
+    df['datetime'] = df['ds']
+    
+    df['dayofweek'] = df['ds'].dt.dayofweek
+    df['quarter'] = df['ds'].dt.quarter
+    df['month'] = df['ds'].dt.month
+    df['year'] = df['ds'].dt.year
+    df['dayofyear'] = df['ds'].dt.dayofyear
+    df['dayofmonth'] = df['ds'].dt.day
+    df['weekofyear'] = df['ds'].dt.weekofyear
+    df['ds'] = df.index
+    
+    X = df[['datetime','dayofweek','quarter','month','year',
+           'dayofyear','dayofmonth','weekofyear']]
+    if label:
+        y = df[label]
+        return X, y
+    return X
+
+X, y = create_features(df, label='y')
+
+
+features_and_target = pd.concat([X, y], axis=1)
+
+
+X_sCOV, y_sCOV = create_features(df, label='y')
+
+
+features_and_target_sCOV = pd.concat([X_sCOV,  y_sCOV], axis=1)
+ 
+ 
+ 
+ 
+ 
+
 st.title("A Simple Streamlit Web App")
 
 
