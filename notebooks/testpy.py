@@ -105,6 +105,44 @@ X, y = create_features_saison(df,label='y')
 features_and_target = pd.concat([X, y], axis=1)
  
 
+def pilot() :
+  sns.pairplot(features_and_target_sCOV.dropna(),
+             hue='year',  palette='hls',
+             x_vars=['dayofweek',
+                     'year','weekofyear'],
+             y_vars='y',
+             height=5,
+             plot_kws={'alpha':0.15, 'linewidth':0}  
+            )
+  plt.suptitle('Nombre entrée parking par jour , année et semaine ')
+ 
+  return plt
+def pilot3(): 
+  fig, ax = plt.subplots(figsize=(10, 5))
+  sns.boxplot(data=features_and_target.dropna(),
+            x='weekday',
+            y='y',
+            hue='season',
+            ax=ax,
+            linewidth=1)
+  ax.set_title('Nombre Entrée Parking par saison  ')
+  ax.set_xlabel('jour de la semaine')
+  ax.set_ylabel('Nombre Entrée Parking')
+  ax.legend(bbox_to_anchor=(1, 1))
+  return plt 
+fig = pilot3() 
+
+st.pyplot(fig)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 st.title("A Simple Streamlit Web App")
 
 
