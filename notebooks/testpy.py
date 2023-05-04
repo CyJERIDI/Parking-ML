@@ -5,7 +5,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 import seaborn as sns
-
+df = sns.load_dataset("penguins")
+sns.pairplot(df, hue="species")
 #from sklearn.metrics import mean_squared_error, mean_absolute_error
 
 df = pd.read_csv('data/verdun_MAJ.csv' )
