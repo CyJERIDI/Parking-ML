@@ -12,6 +12,8 @@ import numpy as np
 import pandas as pd
 
 import matplotlib.pyplot as plt
+
+%pip install Prophet  
 from prophet import Prophet
 
 
