@@ -4,7 +4,7 @@ import prophet
 import numpy as np
 #import seaborn as sns
 import matplotlib.pyplot as plt
-from sklearn.metrics import mean_squared_error, mean_absolute_error
+#from sklearn.metrics import mean_squared_error, mean_absolute_error
 
 df = pd.read_csv('https://github.com/CyJERIDI/Parking-ML/blob/codespace-cyjeridi-literate-computing-machine-gg66r7x9gvjhv5jj/data/verdun_MAJ.csv' )
  
