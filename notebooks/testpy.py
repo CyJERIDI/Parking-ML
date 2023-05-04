@@ -133,9 +133,7 @@ def pilot3():
   ax.set_ylabel('Nombre Entrée Parking')
   ax.legend(bbox_to_anchor=(1, 1))
   return plt 
-fig = pilot3() 
 
-st.pyplot(fig)
  
  
  
@@ -151,4 +149,15 @@ st.title("A Simple Streamlit Web App")
 
 dat = st.text_input("Faire la prédiction à partir de la date : ", '') 
 d=predict(dat)
+
+
+fig1 = pilot() 
+
+st.pyplot(fig1)
+fig = pilot3() 
+
+st.pyplot(fig)
+
+
+
 st.dataframe(d['yhat'])
