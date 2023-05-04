@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import prophet
 import numpy as np
+python -m pip install seaborn
 import seaborn as sns
 import matplotlib.pyplot as plt
 #from sklearn.metrics import mean_squared_error, mean_absolute_error
