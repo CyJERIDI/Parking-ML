@@ -60,7 +60,7 @@ def create_features(df, label=None):
         return X, y
     return X
 X, y = create_features(df, label='y')
- 
+features_and_target = pd.concat([X, y], axis=1) 
  
  
  
