@@ -1,20 +1,11 @@
-numpy
-pandas
-scikit-learn
-scipy
-seaborn
-matplotlib
-altair
-shap
-xgboost
-bayesian-optimization
-hyperopt
+ipywidgets==7.7.1
+matplotlib==3.7.0
+numpy==1.24.2
+pandas==1.5.3
+torch==1.12.1
+torchvision==0.13.1
+tqdm==4.64.0
+prophet ==1.1
 streamlit
-Pillow
-glmnet
-slickml
-plotly
-graphviz
-keras
-tensorflow
-streamlit-drawable-canvas
+seaborn==0.11.0
+IPython >=7.31.1;<8.0.0 
