@@ -59,8 +59,7 @@ def create_features(df, label=None):
         y = df[label]
         return X, y
     return X
-
-
+X, y = create_features(df, label='y')
  
  
  
