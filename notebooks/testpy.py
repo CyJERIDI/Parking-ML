@@ -50,7 +50,6 @@ def create_features(df, label=None):
     df['year'] = df['ds'].dt.year
     df['dayofyear'] = df['ds'].dt.dayofyear
     df['dayofmonth'] = df['ds'].dt.day
-    df['weekofyear'] = df['ds'].dt.weekofyear
     df['ds'] = df.index
     
     X = df[['datetime','dayofweek','quarter','month','year',
