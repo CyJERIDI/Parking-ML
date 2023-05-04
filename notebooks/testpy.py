@@ -119,7 +119,7 @@ def pilot() :
   return plt
 def pilot3(): 
   fig, ax = plt.subplots(figsize=(10, 5))
-  sns.boxplot(data=features_and_target.dropna(),
+  seaborn.sns.boxplot(data=features_and_target.dropna(),
             x='weekday',
             y='y',
             hue='season',
