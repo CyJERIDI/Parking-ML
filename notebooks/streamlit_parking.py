@@ -14,7 +14,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from prophet import Prophet
 
-import prophet
+
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 
 
